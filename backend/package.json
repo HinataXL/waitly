@@ -1,0 +1,14 @@
+{
+  "name": "@waitly/backend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 8787",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": { "hono": "^4.9.0" },
+  "devDependencies": { "typescript": "^5.9.2", "vitest": "^5.0.4", "wrangler": "^4.33.0" }
+}

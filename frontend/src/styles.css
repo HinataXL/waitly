@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: var(--canvas);
+  --canvas: #f3f6f8;
+  --surface: #ffffff;
+  --ink: #183549;
+  --muted: #526775;
+  --accent: #c6471d;
+  --border: #d4dfe5;
+  --success: #246248;
+  --error: #a32e2e;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  scrollbar-color: var(--muted) var(--canvas);
+  scrollbar-width: thin;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+::selection { background: #ffd2bf; color: var(--ink); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--canvas); }
+::-webkit-scrollbar-thumb { background: var(--muted); border: 2px solid var(--canvas); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ink); }
+.page { max-width: 1240px; min-height: 100svh; margin: auto; padding: 0 64px; display: flex; flex-direction: column; }
+.header { min-height: 112px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); gap: 20px; }
+.brand { text-decoration: none; color: var(--ink); display: flex; align-items: center; font-family: 'Manrope', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -1.5px; }
+.brand-mark { display: grid; place-items: center; margin-right: 12px; width: 34px; height: 34px; border-radius: 11px; background: var(--ink); color: white; font-size: 25px; letter-spacing: -3px; padding-right: 3px; }
+.brand-dot { color: var(--accent); }
+.course-label { color: var(--muted); font-size: 13px; }
+.course-label span { color: var(--accent); margin-left: 10px; }
+main { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 70px; padding: 82px 0 60px; }
+.eyebrow { display: flex; align-items: center; gap: 9px; font-size: 11px; letter-spacing: 1.5px; font-weight: 700; margin: 0 0 26px; }
+.eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+h1 { font-family: 'Manrope', sans-serif; font-size: clamp(40px, 4.4vw, 58px); line-height: 1.13; letter-spacing: -2.7px; font-weight: 800; margin: 0; }
+h1 > span { color: var(--accent); }
+.description { max-width: 430px; color: var(--muted); font-size: 16px; line-height: 1.8; margin: 26px 0 32px; }
+.course { display: flex; align-items: center; gap: 14px; }
+.course-icon { width: 42px; height: 42px; border: 1px solid var(--border); border-radius: 50%; display: grid; place-items: center; font-size: 22px; color: var(--accent); }
+.course strong, .course div > span { display: block; }
+.course strong { font-size: 13px; font-weight: 700; }
+.course div > span { color: var(--muted); font-size: 12px; margin-top: 4px; }
+.signup { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px; box-shadow: 0 12px 36px #18354907; }
+.signup-top { display: flex; justify-content: space-between; align-items: center; font-size: 10px; font-weight: 700; letter-spacing: 1.4px; margin-bottom: 30px; }
+.demo-badge { background: var(--canvas); padding: 6px 8px; border-radius: 5px; color: var(--muted); }
+h2 { font-family: 'Manrope', sans-serif; font-size: 26px; letter-spacing: -1px; margin: 0 0 12px; }
+.signup > p { font-size: 14px; line-height: 1.7; color: var(--muted); margin: 0 0 28px; }
+label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 9px; }
+input { width: 100%; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 15px; font: inherit; font-size: 14px; color: var(--ink); min-height: 50px; }
+input::placeholder { color: var(--muted); }
+input[aria-invalid='true'] { border-color: var(--error); }
+button { width: 100%; min-height: 50px; border: 0; border-radius: 8px; background: var(--ink); color: white; padding: 14px 18px; font: inherit; font-size: 14px; font-weight: 600; margin-top: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 16px; transition: background .15s; }
+button:hover:enabled { background: #284f68; }
+button:active:enabled { background: #102738; }
+button:disabled { cursor: default; }
+input:disabled { opacity: .65; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.status { min-height: 64px; padding-top: 12px; font-size: 12px; line-height: 1.6; }
+.status.error { color: var(--error); }
+.status.success { color: var(--success); }
+.status.loading { color: var(--muted); }
+.fine-print { font-size: 11px; line-height: 1.7; color: var(--muted); margin: 0; }
+.signup-bottom { border-top: 1px solid var(--border); margin-top: 24px; padding-top: 18px; display: flex; gap: 10px; font-size: 11px; color: var(--muted); }
+.signup-bottom > span { color: var(--accent); }
+.closing { display: flex; align-items: center; gap: 24px; margin-bottom: 58px; }
+.closing p { font-size: 12px; white-space: nowrap; color: var(--muted); }
+.closing-line { height: 1px; flex: 1; background: var(--border); }
+footer { display: flex; justify-content: space-between; gap: 20px; padding: 24px 0; border-top: 1px solid var(--border); font-size: 11px; color: var(--muted); }
+.spinner { width: 14px; height: 14px; border: 2px solid #ffffff70; border-top-color: white; border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 950px) { .page { padding: 0 32px; } .hero { gap: 32px; } h1 { font-size: 44px; } .signup { padding: 24px; } }
+@media (max-width: 720px) { .page { padding: 0 24px; } .header { min-height: 88px; } .course-label { max-width: 140px; text-align: right; font-size: 11px; } .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 0 28px; } h1 { font-size: clamp(36px, 8vw, 50px); letter-spacing: -1.9px; } .description { max-width: 100%; } .signup { width: 100%; } .closing { gap: 14px; margin-bottom: 28px; } footer { line-height: 1.7; } footer > span:last-child { max-width: 150px; text-align: right; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+@media (forced-colors: active) { :root { scrollbar-color: auto; } button { border: 1px solid ButtonText; } }
