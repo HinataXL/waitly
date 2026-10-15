@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/wrangler/config-schema.json",
-  "name": "waitly-api",
+  "name": "waitly-backend",
   "main": "src/index.ts",
   "compatibility_date": "2026-10-12",
   "vars": {
